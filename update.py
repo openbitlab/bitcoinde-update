@@ -6,7 +6,7 @@ import sys
 import urllib2 as ul2
 
 f = open ('APIKEY', 'r')
-API_KEY = f.read ()
+API_KEY = f.read ().replace ('\n', '').replace ('\r', '')
 f.close ()
 
 DEST_DIR = "/var/www/data/bitcoinmap/btcde"
